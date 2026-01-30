@@ -1,0 +1,41 @@
+@keyframes aws-pulse-glow {
+  0% {
+    filter: drop-shadow(0 0 5px rgba(33, 101, 243, 0.3));
+  }
+  50% {
+    filter: drop-shadow(0 0 15px rgba(33, 101, 243, 0.8)) 
+            drop-shadow(0 0 40px rgba(82, 153, 255, 0.6));
+  }
+  100% {
+    filter: drop-shadow(0 0 5px rgba(33, 101, 243, 0.3));
+  }
+}
+
+.aws-badge-shape {
+  transform-origin: center;
+  animation: aws-pulse-glow 3s infinite ease-in-out;
+  will-change: filter; 
+}
+
+/* Efect suplimentar la hover */
+.aws-badge-shape:hover {
+    animation: none;
+    filter: drop-shadow(0 0 20px rgba(82, 153, 255, 1)) 
+            drop-shadow(0 0 60px rgba(33, 101, 243, 0.9));
+    cursor: pointer;
+    transition: filter 0.3s ease-out;
+}
+
+.aws-badge-wrapper {
+  display: inline-block;
+  transition:
+    transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    filter 0.35s ease;
+  will-change: transform, filter;
+}
+
+.aws-badge-wrapper:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.15);
+  cursor: pointer;
+}

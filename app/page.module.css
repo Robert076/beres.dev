@@ -1,0 +1,12 @@
+.page {
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--background);
+}
+
+.home {
+  width: 40vw;
+  border: 1px solid red;
+}

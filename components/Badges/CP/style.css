@@ -1,0 +1,13 @@
+.aws-badge-wrapper {
+  display: inline-block;
+  transition:
+    transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    filter 0.35s ease;
+  will-change: transform, filter;
+}
+
+.aws-badge-wrapper:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.15);
+  cursor: pointer;
+}
